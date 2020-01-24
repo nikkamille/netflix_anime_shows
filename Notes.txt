@@ -1,0 +1,5 @@
+Create a CLI Data Gem that will show the available anime shows on Netflix
+
+Things to Do:
+Create a Class Anime 
+Inside anime.rb, create attr_accessor for :title, :description, :release_year, and :seasons
