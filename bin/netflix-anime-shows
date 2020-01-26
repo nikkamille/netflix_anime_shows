@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+require './lib/netflix_anime_shows'
+
 NetflixAnimeShows::CLI.new.start
+
+
 
 
