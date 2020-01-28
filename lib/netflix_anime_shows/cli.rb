@@ -16,4 +16,12 @@ class NetflixAnimeShows::CLI
     user_input = gets.chomp.to_i 
   end
   
+  def goodbye
+    if user_input == "exit"
+      puts ""
+      puts "Sayōnara!"
+      puts ""
+    end
+  end
+  
 end
