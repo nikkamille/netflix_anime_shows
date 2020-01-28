@@ -3,6 +3,7 @@ class NetflixAnimeShows::CLI
   def start 
     anime_list
     menu
+    sayonara
   end
   
   def anime_list
@@ -12,16 +13,17 @@ class NetflixAnimeShows::CLI
   end
   
   def menu
-    puts "Which anime would you like to know about?"
-    user_input = gets.chomp.to_i 
+    user_input = nil
+    if user_input != "exit"
+      puts "Which anime would you like to know about?"
+      user_input = gets.chomp.to_i 
+    end
   end
   
-  def goodbye
-    if user_input == "exit"
-      puts ""
-      puts "Sayōnara!"
-      puts ""
-    end
+  def sayonara
+    puts ""
+    puts "Sayōnara!"
+    puts ""
   end
   
 end
