@@ -10,14 +10,12 @@ class NetflixAnimeShows::CLI
     puts ""
     puts "Kon'nichiwa! Here's our list of anime shows in Netflix."
     puts ""
+    @anime = NetflixAnimeShows::Anime.all
   end
   
   def menu
-    user_input = nil
-    if user_input != "exit"
-      puts "Which anime would you like to know about?"
-      user_input = gets.chomp.to_i 
-    end
+    puts "Which anime would you like to know about?"
+    user_input = gets.chomp.to_i 
   end
   
   def sayonara
