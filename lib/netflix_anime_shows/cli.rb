@@ -17,13 +17,11 @@ class NetflixAnimeShows::CLI
   end
   
   def menu
-    puts ""
     puts "Would you like to see our list of anime shows in Netflix? Type in yes or no."
-    puts ""
     
     # @anime = NetflixAnimeShows::Anime.all # will show all the titles alphabetically and with corresponding numbers
     
-    user_input = get.chomp.downcase
+    user_input = gets.chomp.downcase
     case user_input
     when "yes"
       puts "all the anime titles" # anime_list
