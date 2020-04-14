@@ -24,9 +24,11 @@ class NetflixAnimeShows::CLI
     user_input = gets.chomp.downcase
     case user_input
     when "yes"
-      puts "all the anime titles" # anime_list
+      puts "all the anime titles" 
+      # anime_list
     when "no"
       sayonara
+      exit # exits the program
     else
       puts "I'm sorry; I don't know that."
       menu
