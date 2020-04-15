@@ -1,7 +1,3 @@
-require 'pry'
-require 'nokogiri'
-require 'open-uri'
-
 class Anime
   
   attr_accessor :title, :description, :release_year, :no_of_seasons
@@ -24,10 +20,6 @@ class Anime
     @all.clear
   end
   
-  def scrape_anime_page
-    doc = NOKOGIRI::HTML(open("https://www.netflix.com/browse/genre/7424"))
-    # titles = doc.css(".nm-collections-title-name").text
-    binding.pry 
-  end
+  
   
 end
