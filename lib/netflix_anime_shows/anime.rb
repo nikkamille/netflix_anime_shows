@@ -1,4 +1,6 @@
 require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
 class Anime
   
@@ -11,15 +13,21 @@ class Anime
     @description = description
     @release_year = release_year
     @no_of_seasons = no_of_seasons
-    binding.pry
+    @all << self
   end
   
-  Anime.new(title: "One Punch Man", description: "kkkk", release_year: "2015", no_of_seasons: "2") 
+  def self.all
+    @all
+  end
+  
+  def self.reset_all
+    @all.clear
+  end
   
   def scrape_anime_page
     doc = NOKOGIRI::HTML(open("https://www.netflix.com/browse/genre/7424"))
-    titles = doc.css(".nm-collections-title-name").text
-    # binding.pry 
+    # titles = doc.css(".nm-collections-title-name").text
+    binding.pry 
   end
   
 end
