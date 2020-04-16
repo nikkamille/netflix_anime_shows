@@ -6,14 +6,15 @@ require_relative './anime.rb'
 
 class Scraper
   
-  def scrape_anime_page
+  def scrape_page 
     doc = Nokogiri::HTML(open("https://www.netflix.com/browse/genre/7424"))
-    # titles = doc.css(".nm-collections-title-name").text
-    binding.pry 
+    # binding.pry 
   end
+  
+  def get_details
   
 end
 
-Scraper.new.scrape_anime_page
+Scraper.new.scrape_page
 
 # title = doc.css(".nm-collections-title-name").first.text
