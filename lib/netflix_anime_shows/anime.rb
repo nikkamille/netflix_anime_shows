@@ -4,11 +4,7 @@ class Anime
   
   @@all = []
   
-  def initialize(title:, description:, release_year:, no_of_seasons:)
-    @title = title
-    @description = description
-    @release_year = release_year
-    @no_of_seasons = no_of_seasons
+  def initialize
     @all << self
   end
   
@@ -19,7 +15,4 @@ class Anime
   def self.reset_all
     @all.clear
   end
-  
-  
-  
 end
