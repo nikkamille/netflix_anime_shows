@@ -12,11 +12,15 @@ class Scraper
   
   def get_info
     anime_info_page = Nokogiri::HTML(open("https://www.netflix.com/title/80050063"))
-    binding.pry
   end
   
   def scrape_anime_shows
     self.get_page.css(".nm-collections-title-name").text
+  end
+  
+  def scrape_anime_info
+    self.get_info.css(".details-container")
+    binding.pry
   end
   
   def create_anime_shows
@@ -27,6 +31,6 @@ class Scraper
   
 end
 
-Scraper.new.get_info
+Scraper.new.scrape_anime_info
 
 # title = doc.css(".nm-collections-title-name").first.text
