@@ -7,7 +7,7 @@ require_relative './anime.rb'
 class Scraper
   
   def get_page 
-    anime_page = Nokogiri::HTML(open("https://www.netflix.com/browse/genre/7424"))
+    anime_page = Nokogiri::HTML(open("https://www.whats-on-netflix.com/whats-new/anime/"))
     binding.pry
   end
   
